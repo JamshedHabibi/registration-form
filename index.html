@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/1bfccca946.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <h1>MyRegistrationForm</h1>
+    <div class='progressbar' data-label="Progress..."><span id='percentage'>0%</span></div>
+    <form class='registration'>
+    
+        <div id="email" class="email active">
+            <i class="fas fa-envelope"></i>
+            <input type='email' id='email_input' placeholder='John_Doe123@email.com' required/>
+            <i class="fas fa-angle-double-right" id='arrow1'></i>
+        </div>    
+
+        <div id="username" class="username innactive">
+            <i class="fas fa-user"></i>
+            <input type='text' id='username_input' placeholder='Username' required/>
+            <i class="fas fa-angle-double-right" id='arrow2'></i>
+        </div>
+
+        <div id="password" class="password innactive">
+        <i class="fas fa-key"></i>
+        <input type='password' id='password_input' placeholder='Password' required/>
+        <i class="fas fa-angle-double-right" id='arrow3'></i>
+        </div>
+
+        <div id='submission' class="submission innactive">
+            <p>Thank you! Your form has been submitted
+            <i class="far fa-smile"></i>
+            </p>
+
+        </div>
+
+    </form>
+
+    <p id='errorMessage'></p>
+
+    <script src='script.js'></script>
+
+</body>
+</html>

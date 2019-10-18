@@ -1,0 +1,142 @@
+body {
+    height: 753px;
+    display: flex;
+    background: #99CEFE;
+    position: relative; 
+    transition: background 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+
+body::before {
+    background: #99CEFE;
+}
+
+.progressbar {
+    position: absolute;
+    top: 32.5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 1.5em;
+    background: silver;
+    border: solid;
+    border-color: black;
+    border-width: .1em;
+    border-radius: .75em;
+    color: white;
+    font-size: 12.5px;
+    --width: 0;
+}
+
+#percentage {
+    position: absolute;
+    left: 5.5em;
+    top: .2em;
+    font-size: 12.5px;
+
+}
+
+.progressbar::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .4em;
+    top: .75em;
+    transform: translate(0, -50%);
+    width: calc(var(--width, 0)*1%);
+    background: green;
+    color: white;
+    min-width: 0.75rem;
+    max-width: calc(100% - 1.65em);
+    padding-left: .75em;
+    border-radius: .75em;
+}
+
+
+h1 {
+    font-family: lobster;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.email,
+.username,
+.password,
+.submission {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 300px;
+    height: 30px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+#errorMessage {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    background: none;
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.email i,
+.username i,
+.password i,
+.submission i {
+    padding: 3px;
+    
+}
+
+
+.fa-angle-double-right {
+    cursor: pointer;
+}
+
+.fa-angle-double-right:active {
+transform: translate3d(2px, 2px, -2px);
+}
+
+div.innactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% ,30%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all; 
+}
+
+.email input,
+.username input,
+.password input,
+.submission input {
+    border: none;
+    flex: 0.9;
+    background: none;
+    height: 100%;
+    outline: none;
+    transition: background 0.5s ease-in-out;
+}
